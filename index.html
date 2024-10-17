@@ -23,189 +23,95 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h1>Beautiful presentations</h1>
-                    <h2>New features</h2>
+                    <h1>Транзакция</h1>
+                    <img class="r-stretch" src="https://ktkv-presentations.github.io/db-11" data-type="qrcode" />
+                </section>
+                <section>
+                    <h1>Транзакция</h1>
+                    <p>логическая единица работы, которая состоит из одного или нескольких операций над базой данных, выполняемых как одно целое</p>
+                </section>
+                <section>
+                    <h1>Значение транзакций в базах данных</h1>
                     <ul>
-                        <li>Nerd icons </li>
-                        <li>
-                            <code class="js">
-                                (inline) => code("highlighting")
-                            </code>
-                        </li>
-                        <li>Automatic QR Code generation</li>
-                        <li>and much more!</li>
+                        <li>Обеспечение целостности данных</li>
+                        <li>Поддержка конкурентного доступа</li>
+                        <li>Восстановление</li>
                     </ul>
                 </section>
                 <section>
-                    <h1>CUSTOM TOKYONIGHT THEME</h1>
-                    <h2 class="fragment">THAT HAS</h2>
-                    <h3 class="fragment">MULTI</h3>
-                    <h4 class="fragment">LEVEL</h4>
-                    <h5 class="fragment">HEADING</h5>
-                    <h6 class="fragment">COLORS</h6>
-                    <h6>
-                        Thanks to this project
-                        <a
-                            href="https://github.com/tcmmichaelb139/obsidian-tokyonight">
-                            
-                        </a>
-                        for the colorscheme!
-                    </h6>
-                </section>
-                <section>
                     <section>
-                        <h1>Tailwind CSS</h1>
-                        <div class="grid grid-cols-2 gap-8">
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                            <div class="col-span-2">
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                        </div>
+                    <h1>Основные свойства транзакций</h1>
+                    <h2>Атомарность</h2>
+                    <p>Атомарность означает, что транзакция выполняется полностью или не выполняется вовсе</p>
                     </section>
                     <section>
-                        <h1>Custom classes</h1>
-                        <div class="grid grid-cols-3 gap-8">
-                            <div class="border-r">
-                                <h5>border-r</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-o">
-                                <h5>border-o</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-y">
-                                <h5>border-y</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
+                        <h1>Согласованность</h1>
+                        <p>Согласованность гарантирует, что транзакция переводит базу данных из одного согласованного состояния в другое</p>
+                    </section>
+                    <section>
+                        <h1>Изолированность</h1>
+                        <p>способ определения того, как результаты одной транзакции могут быть видны другим транзакциям</p>
+                    </section>
+                    <section>
+                        <h1>Виды изолированности</h1>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-b">
+                                <h4>Read Uncommitted</h4>
+                                <p>транзакции могут читать данные, которые еще не зафиксированы</p>
+                            </div><div class="border-b">
+                                <h4>Read Committed</h4>
+                                <p>транзакции могут видеть только зафиксированные данные</p>
+                            </div><div class="border-b">
+                                <h4>Repeatable Read</h4>
+                                <p>данные, считанные транзакцией, не могут быть изменены другими транзакциями до завершения</p>
+                            </div><div class="border-b">
+                                <h4>Serializable</h4>
+                                <p>обеспечивает полную изоляцию между транзакциями</p>
                             </div>
                         </div>
                     </section>
                 </section>
                 <section>
                     <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <div>
-                            Now also has Tokyo Night
-                            <code>highlight.js</code>
-                            highlighting implementation
-                        </div>
-                        <pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
-					</code></pre>
+                        <h1>Команды управления транзакциями</h1>
+                        <h4>BEGIN / START TRANSACTION</h4>
+                        <p>означает, что все последующие изменения данных будут относиться к этой транзакции, пока она не будет зафиксирована или отменена</p>
                     </section>
                     <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <h5>Inline code highlighting is now also supported!</h5>
-                        <p>
-                            Just wrap your code with
-                            <code>&lt;code&gt;</code>
-                            tag and get highlighting like this
-                            <code class="js">
-                                const foo = () => {return bar}
-                            </code>
-                            !
-                        </p>
+                        <h1>Команды управления транзакциями</h1>
+                        <h4>COMMIT</h4>
+                        <p>завершает транзакцию, фиксируя все изменения в базе данных</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h1>Команды управления транзакциями</h1>
+                        <h4>ROLLBACK</h4>
+                        <p>Отменяет текущую транзакцию, возвращая базу данных в состояние, предшествующее началу транзакции</p>
                     </section>
                 </section>
                 <section>
-                    <h1>Mermaid for beautiful diagrams!</h1>
-                    <div class="mermaid">
-                        <pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre
-                        >
-                    </div>
-                    <h4>
-                        Check documentation
-                        <a href="https://mermaid.js.org/config/usage.html">
-                            here
-                        </a>
-                        !
-                    </h4>
+                    <h1>Пример простой транзакции</h1>
+                    <pre class="r-stretch"><code data-trim data-noescape data-line-numbers class="python">
+BEGIN;
+
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 1; -- Снятие 100 с первого счета
+UPDATE accounts SET balance = balance + 100 WHERE account_id = 2; -- Зачисление 100 на второй счет
+
+COMMIT; -- Подтверждение транзакции
+                    </code></pre>
                 </section>
                 <section>
-                    <h1>Now supports Nerd font icons!</h1>
-                    <div>Nerdy project that adds icons to font itself</div>
-                    <h6>
-                        Checkout their site for icons like this
-                        <a href="https://www.nerdfonts.com/">󰖟</a>
-                        !
-                    </h6>
-                </section>
-                <section>
-                    <h1>Now supports automatic QRCode generation!</h1>
-                    <div>
-                        With GoQR you can just add data-type and alt attributes
-                        to your
-                        <code class="html">
-                            &lt;img src="https://goqr.me/" data-type="qrcode" /
-                            &gt;
-                        </code>
-                        tag!
-                    </div>
-                    <img
-                        class="r-stretch"
-                        src="https://goqr.me/"
-                        data-type="qrcode" />
-                </section>
-                <section>
-                    <h1>New changes on the way!</h1>
+                    <h1>Пример с обработкой событий</h1>
+                    <pre class="r-stretch"><code data-trim data-noescape data-line-numbers class="sql">
+BEGIN;
+
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 1;
+IF (SELECT balance FROM accounts WHERE account_id = 1) &lg; 0 THEN
+    ROLLBACK; -- Если баланс стал отрицательным, отменяем транзакцию
+ELSE
+    UPDATE accounts SET balance = balance + 100 WHERE account_id = 2;
+    COMMIT; -- Подтверждение транзакции, если все прошло успешно
+END IF;
+                    </code></pre>
                 </section>
             </div>
         </div>
